@@ -24,7 +24,7 @@ The Autoencoders successfully learned to compress and reconstruct the images, wh
 
 - **Quantitative Evaluation:** The V1 classifier (8D latent space) achieved an accuracy of **`~82.5%`**, while the V2 classifier (4D latent space) achieved **`~73.3%`**. This explicitly demonstrates the trade-off and impact of bottleneck size on feature retention and classification capability.
 
-![[AE-Loss.png]]
+![ede](assets/AE-Loss.PNG)
 
 ## 2. Life Expectancy Prediction using MLP Regression
 
