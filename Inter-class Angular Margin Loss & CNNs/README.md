@@ -19,8 +19,8 @@ This repository explores the implementation and mathematical foundations of adva
 ### Results
 
 The Mean Classifier achieved an initial test accuracy of **86.5%**. However, analysis of the Confusion Matrix revealed targeted misclassifications between specific hard class pairs (e.g., classes 3 and 5) that had randomly spawned with proximate centroids, causing severe spatial overlap.
+![ede](assets/Confusion_Matrix_Mean_Classifier.PNG)
 
-![[assets/Confusion_Matrix_Mean_Classifier.PNG]]
 ## 2. Base CNN with Softmax Classification
 
 - Trained a Deep Convolutional Neural Network (inspired by the MNIST network) to extract 128-dimensional embeddings, classified via a standard Softmax head.
@@ -42,7 +42,10 @@ The model converged best with a batch size of 64, achieving a test accuracy of *
 - **Class Separation:** The pairwise centroid angle heatmap revealed severely acute angles (as low as 8.5°) between overlapping classes, leading to fragile decision boundaries for hard samples.
 
 
-![[assets/Base_Loss_With_Batch_Sizes.PNG]]![[assets/Base_Confusion_Matrix_With_Batch_Sizes.PNG]]![[assets/Base_PCA_With_Batch_Sizes.PNG]]![[assets/Base_Angles.PNG]]
+![dcccd](assets/Base_Loss_With_Batch_Sizes.PNG)
+![dcdcdcdc](assets/Base_Confusion_Matrix_With_Batch_Sizes.PNG)
+![dcdccddcdcdcdc](assets/Base_PCA_With_Batch_Sizes.PNG)
+![lldldl](assets/Base_Angles.PNG)
 
 ## 3. Angular Margin Loss for Enhanced Feature Extraction
 
@@ -65,7 +68,10 @@ While the raw test accuracy remained comparable (**83.17%**) due to the dataset'
 - **Angular Expansion:** The critical overlap angle between the hardest classes (e.g., classes 3 and 5) expanded drastically from 8.5° in the baseline to **32.4°**. Most inter-class angles were successfully pushed into a robust 90°–110° range.
     
 - **Hypersphere Projection:** PCA confirmed that embeddings formed distinct, dense arcs on the surface of a unit hypersphere, proving the margin penalty successfully pushed apart competing classes.
-![[assets/AM_Loss_With_Batch_Sizes.PNG]]![[assets/AM_Confusion_Matrix.PNG]]![[assets/AM_PCA.PNG]]![[assets/AM_Angles.PNG]]
+![dqqcdcd](assets/AM_Loss_With_Batch_Sizes.PNG)
+![qqqq](assets/AM_Confusion_Matrix.PNG)
+![pqpqp](assets/AM_PCA.PNG)
+![nbs](assets/AM_Angles.PNG)
 
 
 ## 4. Quantitative Comparative Analysis
