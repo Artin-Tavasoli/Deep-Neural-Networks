@@ -45,7 +45,7 @@ The recurrent models successfully learned to classify the sentiment of movie rev
 
 The empirical results perfectly aligned with the theoretical derivations, illustrating the severe vanishing gradient in Vanilla RNNs and the stability of LSTMs.
 
-![[assets/gradient_diagnostics.png]]
+![iii](assets/gradient_diagnostics.png)
 
 - **Gradient Retention (Ratio of Step 1 / Step 30):**
     
