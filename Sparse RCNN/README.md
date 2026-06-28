@@ -4,7 +4,7 @@
 
 - Implemented a lightweight Sparse R-CNN model from scratch to detect and localize geometric shapes within a custom synthetic dataset.
 
-![[assets/Model-Overview.png]]
+![ww](assets/Model-Overview.png)
 
 ### ⚙️ Methodology
 
@@ -31,5 +31,5 @@ The model was trained using the Adam optimizer with a Cosine Annealing learning 
 - **Proposal Evolution:** Visual analysis confirmed that the 20 learnable boxes transitioned from completely random and chaotic initializations to uniformly distributed "learned" priors, and finally to precise object localizations after passing through the dynamic head.
 
 
-![[assets/detection.PNG]]
-![[assets/proposal-evolution.PNG]]
+![ee](assets/detection.PNG)
+![jsl](assets/proposal-evolution.PNG)
